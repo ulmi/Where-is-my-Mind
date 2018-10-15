@@ -1,8 +1,9 @@
 ## Command-line tips for *hack n' slash* PDF's
 
-Convert a pdf to tiff with IMAGEMagick
-`convert -density 300 -trim 08_DES_PLANTA_DE_IMPLANTACAO.pdf -quality 100 test.tif`
+Convert a pdf to tiff with IMAGEMagick with 300 dpi
 
-Convert a .PDF to a TIFF color with ghostscript
+`convert -density 300 -trim input.pdf -quality 100 output.tif`
 
-`gs -dNOPAUSE -r300 -sDEVICE=tiff24nc -sOutputFile=output.tif 08_DES_PLANTA_DE_IMPLANTACAO.pdf`
+Convert a .PDF to a TIFF color with ghostscript, in case the other one fails
+
+`gs -dNOPAUSE -r300 -sDEVICE=tiff24nc -sOutputFile=output.tif input.pdf`
