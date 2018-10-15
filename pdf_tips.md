@@ -6,8 +6,6 @@ Convert a pdf to tiff with IMAGEMagick with 300 dpi
 
 Convert a .PDF to a TIFF, PNG or JPEG with color with ghostscript, in case the other one fails
 
-`gs -dNOPAUSE -r300 -sDEVICE=tiff24nc -sOutputFile=output.tif input.pdf
-
+` gs -dNOPAUSE -r300 -sDEVICE=tiff24nc -sOutputFile=output.tif input.pdf
 gs -dNOPAUSE -r300x300 -sDEVICE=pngalpha -sOutputFile=output.png input.pdf
-
-gs -dNOPAUSE -r300x300 -sDEVICE=jpeg -sOutputFile=output.jpg input.pdf`
+gs -dNOPAUSE -r300x300 -sDEVICE=jpeg -sOutputFile=output.jpg input.pdf `
