@@ -18,10 +18,10 @@ Compress a .PDF
 ```
 gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/screen -dNOPAUSE -dQUIET -dBATCH -sOutputFile=out.pdf in.pdf
 ```
--dPDFSETTINGS can be any of:
-/screen : low-resolution output, lowest output size
-/ebook : medium-resolution output, medium output size
-/printer OR /prepress : high-resolution with maximum output size
+**-dPDFSETTINGS can be any of:**
+* **/screen** : low-resolution output, lowest output size
+* **/ebook** : medium-resolution output, medium output size
+* **/printer** OR **/prepress** : high-resolution with maximum output size
 
 Simplier but as powerfull
 
