@@ -2,7 +2,7 @@
 Compress geotiff
 
 ```bash
-gdal_translate -co COMPRESS=JPEG -co PHOTOMETRIC=YCBCR -co PREDICTOR=1 -co "TILED=YES" output.tif input.tif
+gdal_translate -co COMPRESS=JPEG -co PHOTOMETRIC=YCBCR -co PREDICTOR=1 -co "TILED=YES" input.tif output.tif
 ```
 
 Transform raster to gpkg
