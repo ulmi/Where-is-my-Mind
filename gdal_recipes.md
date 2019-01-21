@@ -1,9 +1,14 @@
 
-Compress geotiff
+Compress to GeoTIFF
 
 ```bash
 gdal_translate -co COMPRESS=JPEG -co PHOTOMETRIC=YCBCR -co PREDICTOR=1 -co "TILED=YES" input.tif output.tif
 ```
+Compress to GeoTIFF 16bit to 8bit
+```bash
+gdal_translate -ot Byte -scale -co COMPRESS=JPEG -co PHOTOMETRIC=YCBCR -co "TILED=YES" 171_4_.tif output.tif
+```
+
 
 Transform raster to gpkg
 
