@@ -13,6 +13,6 @@
  
  **remove another character like a parenthesis**
 ```bash
-regexp_substr("cod2_rev",'^[^(]+')
+regexp_substr("field_name",'^[^(]+')
 ```
  
