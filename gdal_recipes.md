@@ -1,10 +1,10 @@
 
 Compress to GeoTIFF
 
-add -b 1 for each layer
+add -b 1 for each band 1, 2, 3, 4 you want
 
 ```bash
--b 1
+-b 1 -b 2 -b 3 -b 4
 ```
 
 ```bash
