@@ -1,6 +1,12 @@
 
 Compress to GeoTIFF
 
+add -b 1 for each layer
+
+```bash
+-b 1
+```
+
 ```bash
 gdal_translate -co COMPRESS=JPEG -co PHOTOMETRIC=YCBCR -co PREDICTOR=1 -co "TILED=YES" input.tif output.tif
 ```
