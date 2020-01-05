@@ -11,7 +11,7 @@
  regexp_substr("field_name",'^[^'']+')
  ```
  
- **remove another character like a parenthesis**
+ **remove other character like a parenthesis**
 ```bash
 regexp_substr("field_name",'^[^(]+')
 ```
