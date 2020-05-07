@@ -38,7 +38,7 @@ do
            ogr2ogr -f 'ESRI Shapefile' -sql "SELECT * FROM \"${i%.*}\" WHERE xisCod=3010201" -update -append $file $i -nln pcotados_merge
       else
            echo "merging……"
-      ogr2ogr -f 'ESRI Shapefile' -sql "SELECT * FROM \"${i%.*}\" WHERE xisCod=3010201" $file $i
+           ogr2ogr -f 'ESRI Shapefile' -sql "SELECT * FROM \"${i%.*}\" WHERE xisCod=3010201" $file $i
 fi
 done
 ``
