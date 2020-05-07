@@ -1,4 +1,4 @@
-### Merge multiple vector files
+#### Merge multiple vector files
 copied from [https://www.northrivergeographic.com ](https://www.northrivergeographic.com/ogr2ogr-merge-shapefiles)
 ```bash
 #!/bin/bash
@@ -20,7 +20,7 @@ fi
 done
 ```
 
-### Merge multiple vector files by attribute
+#### Merge multiple vector files by attribute
 
 needed to add \\"${i%.*}\"\ to ignore the name of input file with special chars and also remove the extension   
 
@@ -45,3 +45,5 @@ do
 fi
 done
 ```
+
+You can add the filename to the attribute table, with `-sql "SELECT *,'${i%M*}' AS carta_numb FROM \"${i%.*}\""` 
