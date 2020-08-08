@@ -18,3 +18,12 @@ FROM deadends
 GROUP BY pt
 HAVING count(*) = 1;
 ```
+
+optimized subqyer example
+```sql
+WITH poly AS (SELECT * FROM Cont_AAD_CAOP2019 as caop
+        where caop.CONCELHO in ('VILA NOVA DE POIARES', 'ARGANIL', 'LOUSÃ', 'CASTANHEIRA DE PÊRA', 'PAMPILHOSA DA SERRA', 'PEDRÓGÃO GRANDE'))
+SELECT st_difference(st_union(poly.geometry),b.geometry)
+FROM "Limite de Concelho" b, poly
+WHERE ST_Intersects(b.geometry, poly.geometry);
+```
