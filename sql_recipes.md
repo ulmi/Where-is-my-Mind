@@ -27,3 +27,10 @@ SELECT st_difference(st_union(poly.geometry),b.geometry)
 FROM "Limite de Concelho" b, poly
 WHERE ST_Intersects(b.geometry, poly.geometry);
 ```
+
+Finding duplicates
+```sql
+select * from (
+select row_number() over (partition by geom order by id asc) as row,
+name, geom from only schema.tabela) as dups where dups.row > 1
+```
