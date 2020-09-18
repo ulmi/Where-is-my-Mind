@@ -12,6 +12,11 @@ gs -dNOPAUSE -r300x300 -sDEVICE=tiff24nc -sOutputFile=output.tif input.pdf
 gs -dNOPAUSE -r300x300 -sDEVICE=pngalpha -sOutputFile=output.png input.pdf
 gs -dNOPAUSE -r300x300 -sDEVICE=jpeg -sOutputFile=output.jpg input.pdf
 ```
+Convert a multiple page .pdf
+```
+gs -dNOPAUSE -dBATCH -sDEVICE=png16m -sOutputFile="Pic-%d.png" input.pdf
+```
+
 #### Compress
 
 Compress a .PDF
