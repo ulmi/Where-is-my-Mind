@@ -47,3 +47,13 @@ done
 ```
 
 You can add the filename to the attribute table, with `-sql "SELECT *,'${i%M*}' AS carta_numb FROM \"${i%.*}\""` 
+
+
+#### export DXF, separate by layer, where ATTRIB is the column name
+```bash
+ogr2ogr -f DXF output.dxf input.shp -sql "SELECT ATTRIB AS Layer FROM input"
+```
+
+```bash
+ogr2ogr -f DXF output.dxf input.shp -zfield ATTRIB
+```
