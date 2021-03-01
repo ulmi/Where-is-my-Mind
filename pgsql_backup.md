@@ -3,7 +3,7 @@
 This recipe is 99% based on the [Scott Gilbertson \(Luxagraf\) post](https://luxagraf.net/src/automatic-offsite-postgresql-backups)
 
 ### What it does?
-+ Creates a compressed PgSQL daily backup, for every DB, if it as no change;
++ Creates a compressed PgSQL daily backup, for every DB, if it as changes;
 
 ### What it doesn't?
 * Coffee
@@ -46,7 +46,7 @@ chmod u+x something_to_remember.sh
 ```bash
 crontab -e
 ```
-  4.1 Add the line to the end of the file
+  .4.1 Add the line to the end of the file
   ```bash
   00 7 * * * cd /home/myuser/ && ./something_to_remember.sh > i_watch.log
  ```
@@ -60,7 +60,7 @@ hostname:port:username:password
 ```bash
 localhost:*:*:your_username:your_password
 ```
-  5.1 change the permissions of the file
+  .5.1 change the permissions of the file
   ```bash
   chmod 600 .pgpass
   ```
