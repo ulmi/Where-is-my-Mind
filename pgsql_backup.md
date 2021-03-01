@@ -30,8 +30,7 @@ for DB in $(psql -l -t -U your_user -hlocalhost |awk '{ print $1}' |grep -vE '^-
   fi
 done
 ```
-
-  1.2. You should change *your_user* with your actual user and also */path/to/backup/dir/*;
+  1.2 You should change *your_user* with your actual user and also */path/to/backup/dir/*
 
 2. Make the something_to_remember.sh executable, with:
 ```bash
@@ -47,8 +46,7 @@ chmod u+x something_to_remember.sh
 ```bash
 crontab -e
 ```
-
-  4.1. Add the line to the end of the file
+  4.1 Add the line to the end of the file
   ```bash
   00 7 * * * cd /home/myuser/ && ./something_to_remember.sh > i_watch.log
  ```
@@ -62,7 +60,7 @@ hostname:port:username:password
 ```bash
 localhost:*:*:your_username:your_password
 ```
-  5.1. change the permissions of the file
+  5.1 change the permissions of the file
   ```bash
   chmod 600 .pgpass
   ```
