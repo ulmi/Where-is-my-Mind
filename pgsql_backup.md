@@ -66,4 +66,4 @@ localhost:*:*:your_username:your_password
   ```bash
   chmod 600 .pgpass
   ```
- 6. make coffee
+6. make coffee
