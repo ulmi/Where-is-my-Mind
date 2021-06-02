@@ -20,3 +20,7 @@ regexp_substr("field_name",'^[^(]+')
 * add to find `^(what you want to find.*` note: you should add `\` to ignore the patterns `.*` adds whatever comes next after the string you are searching
 * on the find field add `$1 with what you want to add at the end`  note: `$1` adds the string you searched.
 
+**select a string with numbers and text**
+```bash
+(?:\d+[a-z]|[a-z]+\d)[a-z\d]*
+```
