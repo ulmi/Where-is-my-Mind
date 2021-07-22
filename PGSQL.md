@@ -1,4 +1,29 @@
-# Automating PgSQL Database Maintenaince and Backup
+# There's no title
+
+
+And thre should be an index...
+
+## Playing with time in postgresql
+
+Count the rows that were edit per day
+
+```sql
+
+SELECT 
+    DATE_TRUNC('day', datetime_column1) AS alias1, 
+	COUNT(datetime_column1) AS alias2
+FROM table_name
+GROUP BY DATE_TRUNC('day', datetime_column1);
+
+```
+
+more info about date_trunc [here](https://www.postgresqltutorial.com/postgresql-date_trunc/)
+
+
+
+
+
+## Automating PgSQL Database Maintenaince and Backup
 
 This recipe is 99% based on the [Scott Gilbertson \(Luxagraf\) post](https://luxagraf.net/src/automatic-offsite-postgresql-backups)
 
@@ -46,7 +71,7 @@ chmod u+x something_to_remember.sh
 ```bash
 crontab -e
 ```
-  .4.1 Add the line to the end of the file
+   4.1 Add the line to the end of the file
   ```bash
   00 7 * * * cd /home/myuser/ && ./something_to_remember.sh > i_watch.log
  ```
@@ -60,7 +85,7 @@ hostname:port:username:password
 ```bash
 localhost:*:*:your_username:your_password
 ```
-  .5.1 change the permissions of the file
+   5.1 change the permissions of the file
   ```bash
   chmod 600 .pgpass
   ```
