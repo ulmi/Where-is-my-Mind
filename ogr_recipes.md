@@ -1,3 +1,14 @@
+#### Converting a ginormous *.CSV with WKT geometry to something else
+
+the polygon WKT information is on a column with the name geometry, therefore -oo GEOM_POSSIBLE_NAMES=geometry
+
+```bash
+ogr2ogr -f GPKG output.gpkg buildings.csv -nln buildings -lco SPATIAL_INDEX=YES -oo GEOM_POSSIBLE_NAMES=geometry
+```
+
+
+
+
 #### Merge multiple vector files
 copied from [https://www.northrivergeographic.com ](https://www.northrivergeographic.com/ogr2ogr-merge-shapefiles)
 ```bash
